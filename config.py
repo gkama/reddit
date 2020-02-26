@@ -1,6 +1,7 @@
 import datetime
 import yaml
 
+
 class Configuration(object):
     def __init__(self):
         self.config_file_path = ".\\config.yaml"
