@@ -1,0 +1,3 @@
+scripts:
+    - name: .\subreddit.py
+      popularUrl: /subreddits/popular
