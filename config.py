@@ -14,4 +14,4 @@ class Configuration(object):
                     if script_config["name"] == script_name:
                         return script_config
             except yaml.YAMLError as e:
-                print("{0}|{1}".format(datetime.datetime.now(), e))
+                print("{0}|error|{1}".format(datetime.datetime.now(), e))
