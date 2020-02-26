@@ -12,6 +12,6 @@ class Configuration(object):
                 config_yaml = yaml.safe_load(f)
                 for script_config in config_yaml["scripts"]:
                     if script_config["name"] == script_name:
-                        return script_config
+                        return script_config["config"]
             except yaml.YAMLError as e:
                 print("{0}|error|{1}".format(datetime.datetime.now(), e))

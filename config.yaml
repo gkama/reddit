@@ -1,3 +1,4 @@
 scripts:
-    - name: .\subreddit.py
+  - name: .\subreddit.py
+    config:
       popularUrl: /subreddits/popular
