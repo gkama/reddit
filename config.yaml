@@ -1,4 +1,14 @@
+config:
+  host: reddit.com/
+  subreddit: r/
+
 scripts:
-  - name: .\subreddit.py
-    config:
-      popularUrl: /subreddits/popular
+  - name: subreddit
+    host: reddit.com
+    urls: 
+      - name: popular
+        url: /subreddits/popular
+        fullUrl: https://www.reddit.com/subreddits/popular
+    subreddits:
+      - name: personalfinance
+        jsonUrl: https://www.reddit.com/r/personalfinance.json
