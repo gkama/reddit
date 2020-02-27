@@ -1,6 +1,8 @@
 import datetime
 import yaml
 
+from logzero import logger
+
 
 class Configuration(object):
     def __init__(self):
@@ -15,4 +17,4 @@ class Configuration(object):
                     if script_config["name"] == script_name:
                         return script_config["config"]
             except yaml.YAMLError as e:
-                print("{0}|error|{1}".format(datetime.datetime.now(), e))
+                logger.error(e)
