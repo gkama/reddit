@@ -1,12 +1,12 @@
 import sys
 
 from flask import Flask
-from scripts.subreddit import Subreddit
+from subreddit import Subreddit
 
 
 app = Flask(__name__)
-
+sub = Subreddit()
 
 @app.route("/subreddits")
 def flask_get_subreddits():
-    return get_subreddits()
+    return sub.get_subreddits()
