@@ -3,7 +3,7 @@ config:
   subreddit: r/
 
 scripts:
-  - name: .\subreddit.py
+  - name: subreddit.py
     host: reddit.com
     urls: 
       - name: popular
