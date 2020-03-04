@@ -10,17 +10,13 @@ from logzero import logger
 
 class Authentication(object):
     def __init__(self):
-        self.config = Configuration()
-        self.config_json = self.config.get_json_config()
-        self.reddit = praw.Reddit(client_id=self.config_json["clientId"],
-                     client_secret=self.config_json["clientSecret"],
+        self._config = Configuration()
+        self._config_json = self._config.get_json_config()
+        self._reddit = praw.Reddit(client_id=self._config_json["clientId"],
+                     client_secret=self._config_json["clientSecret"],
                      user_agent=str(uuid.uuid4()))
 
 
-    def getToken(self):
-        logger.info("getting Reddit API token")
-
-
-    def get(self):
-        for submission in self.reddit.subreddit('learnpython').hot(limit=10):
-            print(submission.title)
+    def GetRedditClient(self):
+        logger.info("getting Reddit API (Praw) client")
+        return self._reddit
