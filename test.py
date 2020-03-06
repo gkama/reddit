@@ -7,7 +7,8 @@ from subreddit import Subreddit
 
 def main(argv):
     sub = Subreddit()
-    sub.getHotTenSubreddit("personalfinance")
+    #sub.getHotTenSubreddit("personalfinance")
+    print(sub.getTopTenSubreddit("personalfinance"))
 
 
 if __name__ == "__main__":

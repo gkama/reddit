@@ -16,9 +16,10 @@ class Subreddit(object):
 
 
     def getHotTenSubreddit(self, subreddit_name):
-        for submission in self._reddit_client.subreddit(subreddit_name).hot(limit=10):
-            print(submission.title)
+        return self._reddit_client.subreddit(subreddit_name).hot(limit=10)
 
     
     def getTopTenSubreddit(self, subreddit_name):
-        return self._reddit_client.subreddit(subreddit_name).top(10)
+        posts = self._reddit_client.subreddit(subreddit_name).top(limit=10)
+        for post in posts:
+            print(post)
