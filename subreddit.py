@@ -20,6 +20,4 @@ class Subreddit(object):
 
     
     def getTopTenSubreddit(self, subreddit_name):
-        posts = self._reddit_client.subreddit(subreddit_name).top(limit=10)
-        for post in posts:
-            print(post)
+        return self._reddit_client.subreddit(subreddit_name).top(limit=10)
